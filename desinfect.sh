@@ -21,7 +21,7 @@ if [ -e "$FILE" ] ; then
     #Change HTTP port for 81 | Need access http://IP:81
     cat /tmp/system.cfg | grep -v http >> /tmp/system2.cfg
     echo "httpd.https.status=disabled" >> /tmp/system2.cfg
-    echo "httpd.port=81" >> /tmp/system2.cfg
+    echo "httpd.port=8081" >> /tmp/system2.cfg
     echo "httpd.session.timeout=900" >> /tmp/system2.cfg
     echo "httpd.status=enabled" >> /tmp/system2.cfg
     cat /tmp/system2.cfg >> /tmp/system.cfg
