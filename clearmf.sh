@@ -10,5 +10,5 @@ network="10.100.7."
 
 while [ $ip -lt 255 ]; do
   #SSH connection and execution of desinfect.sh in GIT
-	sshpass -p $pass ssh $user@$network$ip "https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+	sshpass -p $pass ssh $user@$network$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 done
