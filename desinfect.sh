@@ -13,7 +13,7 @@ if [ -e "$FILE" ] ; then
     rm -R mcuser
     rm rc.poststart
     #Remove mcuser in passwd
-    cat /etc/passwd | grep -v mcuser >> /etc/passwd2
+    cat /etc/passwd | grep -v mcuser | grep -v mother >> /etc/passwd2
     cat /etc/passwd2 >> /etc/passwd
     rm /etc/passwd2
     #Change HTTP port for 81 | Need access http://IP:81
