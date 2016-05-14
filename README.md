@@ -2,6 +2,8 @@ This script is used to remove the virus to ubiquiti radios discovered on 05/13/2
 
 This script change default port HTTP for 81
 
+The exploit use USER:mother and PASS:fucker try it before your user and pass, in test it's work. This script remove this user.
+
 # Multiple radios via SSHPASS
 ------------------
 You can use a single Linux machine with SSHPASS installed to clear all your network equipment improving the sample script clearmf.sh 
