@@ -6,4 +6,4 @@ sshpass -p PASS ssh USER@IP "wget -qO- https://raw.githubusercontent.com/diegoca
 
 - You can run the following command to run directly on a radio
 
-sshpass -p PASS ssh USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
