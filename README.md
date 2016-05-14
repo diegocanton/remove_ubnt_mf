@@ -4,7 +4,7 @@ This script is used to remove the virus to ubiquiti radios discovered on 05/13/2
 ------------------
 You can use a single Linux machine with SSHPASS installed to clear all your network equipment improving the sample script clearmf.sh ou criando seu script com o comando abaixo
 
-sshpass -p PASS ssh USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 
 You need install in server SSHPASS
 - Debian: apt-get install sshpass
