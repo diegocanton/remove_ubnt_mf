@@ -1,21 +1,23 @@
 #!/bin/bash
 # This script change your default port HTTP for 81
+# Colaboration: Alexandre Jeronimo Correa - Onda Internet
 FILE=/etc/persistent/mf.tar
 
 # Check virus
 if [ -e "$FILE" ] ; then
-    echo "Infected"
+    echo "Infected :("
     #Acess folder
     cd /etc/persistent
     #Remove the virus
     rm mf.tar
-    rm -R .mf
-    rm -R mcuser
+    rm -Rf .mf
+    rm -Rf mcuser
     rm rc.poststart
-    #Remove mcuser in passwd
-    cat /etc/passwd | grep -v mcuser | grep -v mother >> /etc/passwd2
-    cat /etc/passwd2 >> /etc/passwd
-    rm /etc/passwd2
+    rm rc.prestart
+    #Remove mcuser in passwd - by Alexandre
+    sed -ir '/mcad/ c ' /etc/inittab
+    sed -ir '/mcuser/ c ' /etc/passwd
+    sed -ir '/mother/ c ' /etc/passwd
     #Change HTTP port for 81 | Need access http://IP:81
     cat /tmp/system.cfg | grep -v http >> /tmp/system2.cfg
     echo "httpd.https.status=disabled" >> /tmp/system2.cfg
@@ -27,14 +29,17 @@ if [ -e "$FILE" ] ; then
     #Write new config
     cfgmtd -w -p /etc/
     cfgmtd -f /tmp/system.cfg -w
-    #Kill process
-    killall -9 search
-    killall -9 mother
-    killall -9 sleep
-    echo "Clear Completed"
+    #Kill process - by Alexandre
+    kill -HUP `/bin/pidof init`
+    kill -9 `/bin/pidof mcad`
+    kill -9 `/bin/pidof init`
+    kill -9 `/bin/pidof search`
+    kill -9 `/bin/pidof mother`
+    kill -9 `/bin/pidof sleep`
+    echo "Clear Completed :)"
     reboot
 else
-    echo "Clear"
+    echo "Clear :) No actions"
     exit
 fi
 
