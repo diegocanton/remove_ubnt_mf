@@ -14,7 +14,7 @@ if [ -z $2]; then
 fi
 if [ -z $3]; then
         #Network
-        network="10.100.7."
+        network="10.0.0."
 fi
 if [ -z $4]; then
         #Initial IP
