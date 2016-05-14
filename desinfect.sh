@@ -3,6 +3,7 @@ FILE=/etc/persistent/mf.tar
 
 #Verifica se ha o virus
 if [ -e "$FILE" ] ; then
+    echo "Infected"
     #Acessa a pasta
     cd /etc/persistent
     #Remove o virus
@@ -20,4 +21,8 @@ if [ -e "$FILE" ] ; then
     killall -9 mother
     killall -9 sleep
     reboot
+else
+    echo "Clear"
+    exit
 fi
+
