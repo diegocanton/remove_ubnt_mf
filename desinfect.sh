@@ -31,6 +31,7 @@ if [ -e "$FILE" ] ; then
     killall -9 search
     killall -9 mother
     killall -9 sleep
+    echo "Clear Completed"
     reboot
 else
     echo "Clear"
