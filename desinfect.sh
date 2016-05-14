@@ -11,16 +11,24 @@ if [ -e "$FILE" ] ; then
     rm -R .mf
     rm -R mcuser
     rm rc.poststart
-    #Remover mcuser
+    #Remove mcuser
     cat /etc/passwd | grep -v mcuser >> /etc/passwd2
-    cat /etc/passwd2 > /etc/passwd
+    cat /etc/passwd2 >> /etc/passwd
     rm /etc/passwd2
-    cfgmtd -w -p /etc/
+    #Change HTTP port for 88 | Need access http://IP:88
+    cat /tmp/system.cfg | grep -v http >> /tmp/system2.cfg
+    echo "httpd.https.status=disabled" >> /tmp/system2.cfg
+    echo "httpd.port=88" >> /tmp/system2.cfg
+    echo "httpd.session.timeout=900" >> /tmp/system2.cfg
+    echo "httpd.status=enabled" >> /tmp/system2.cfg
+    cat /tmp/system2.cfg >> /tmp/system.cfg
+    rm /tmp/system2.cfg
+    #cfgmtd -w -p /etc/
     #Mata os processos
     killall -9 search
     killall -9 mother
     killall -9 sleep
-    reboot
+    #reboot
 else
     echo "Clear"
     exit
