@@ -1,17 +1,17 @@
 #!/bin/bash
 # use clearmf.sh PASS USER NETWORK INITIAL_IP
 
-if ["$1"]; then
+if [$1]; then
 	pass=YOURPASS
 fi
-if ["$2"]; then
+if [$2]; then
 	user=YOURUSER
 fi
-if ["$3"]; then
+if [$3]; then
 	#Network
 	network="10.100.7."
 fi
-if ["$4"]; then
+if [$4]; then
 	#Initial IP
 	ip=1
 fi
