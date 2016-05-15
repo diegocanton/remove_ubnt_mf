@@ -6,6 +6,11 @@ The exploit use USER:mother and PASS:fucker try it before your user and pass, in
 
 These are examples of the firmware WGET ubiquiti does not support HTTPS connections as the RAW link GitHub. You will need to host the file on a disinfection your server.
 
+Check in your DNS IPs infected via TCPDUMP, DNS querys, print IP query xxx.xxx.xxx.xxx. (query by mf infection)
+
+tcpdump -vvv -n port 53 -i eth0 | grep -i nxdomain | grep -i "ns: . " | cut -f5-8 -d "." | cut -f3 -d " " | grep -v "ns" | grep -v "0x"
+
+
 # Multiple radios via SSHPASS
 ------------------
 You can use a single Linux machine with SSHPASS installed to clear all your network equipment improving the sample script clearmf.sh 
