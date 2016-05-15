@@ -8,10 +8,15 @@ The exploit use USER:mother and PASS:fucker try it before your user and pass, in
 
 These are examples of the firmware WGET ubiquiti does not support HTTPS connections as the RAW link GitHub. You will need to host the file on a disinfection your server.
 
+------------------
+
 Check in your DNS IPs infected via TCPDUMP, DNS querys, print IP query xxx.xxx.xxx.xxx. (query by mf infection)
 
 tcpdump -vvv -n port 53 -i eth0 | grep -i nxdomain | grep -i "ns: . " | cut -f5-8 -d "." | cut -f3 -d " " | grep -v "ns" | grep -v "0x"
 
+------------------
+
+To run in parallel, put the "&" the end of SSH access command line, examples are already in parallel. CAUTION: When running in very large networks, has not been tested with many simultaneous connections.
 
 # Multiple radios via SSHPASS
 ------------------
@@ -54,6 +59,9 @@ wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/up
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
 
 ------------------
+PORTUGUÊS
+------------------
+Para executar em paralelo, coloque um o "&" do final das linhas de comando de acesso SSH, os exemplos já estão em paralelo. CUIDADO: Ao executar em redes muito grandes, não foi testado com muitas conexões simultaneas.
 ------------------
 Estes scripts são usados para remover o vírus para rádios Ubiquiti descoberto em 13/05/2016, mais informações em: http://community.ubnt.com/t5/airMAX-General-Discussion/Virus-attack-URGENT-UBNT/td-p/1562940 
 
