@@ -30,7 +30,7 @@ Estes scripts são usados para remover o vírus para rádios Ubiquiti descoberto
 
 Cuidado, isto irá alterar a porta HTTP for 81
 
-O exploit usa USUARIO:mother e SENHA:fucker recomendo tentar usar esse usuário e senha antes da sua, em nossos testes ele tem funcionando.
+O exploit usa USUARIO:mother e SENHA:fucker recomendo tentar usar esse usuário e senha antes da sua, em nossos testes ele tem funcionando. O usuário mother é removido durante a desinfecção.
 
 # Multiplos radios via SSHPASS
 ------------------
