@@ -1,5 +1,6 @@
 #!/bin/bash
 # use clearmf.sh PASS USER
+# Not to run in parallel, remove the "&" the end of lines
 
 # In DNS server
 # List with
@@ -18,11 +19,11 @@ user=$2
 for ip in `grep -v ^# $_input | awk '{print $1}'`; do
         echo "Checking $ip..."
         #Only remove
-        #sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+        #sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh" &
         
         #Only upgrade
-        #sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
+        #sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" &
         
         # Remove and upgrade - Default Option
-        sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
+        sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh" &
 done
