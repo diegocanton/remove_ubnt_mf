@@ -1,10 +1,9 @@
 #!/bin/bash
 # use clearmf.sh PASS USER NETWORK INITIAL_IP
 # use ./clearmf.sh fucker mother 10.0.0 1
-# Use clearmf_net.sh 
+# Use in clearmf_net.sh 
 #/opt/remove_ubnt_mf/clearmf.sh fucker mother 10.0.0 1
-
-
+#/opt/remove_ubnt_mf/clearmf.sh fucker mother 10.0.1 1
 
 pass=$1
 user=$2
