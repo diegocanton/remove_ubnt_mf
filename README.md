@@ -13,9 +13,11 @@ Ex: ./clearmf.sh PASS USER NETWORK INITIAL_IP
 Or or create a script with the following command
 
 - Remove
+
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 
 - Upgrade
+
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 You need install in server SSHPASS
@@ -27,9 +29,11 @@ You need install in server SSHPASS
 You may prefer to run the command only a single radio to this run the following command
 
 - Remove
+
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
 
 - Upgrade
+
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
 ------------------
 ------------------
@@ -48,9 +52,11 @@ Ex: ./clearmf.sh PASS USER NETWORK INITIAL_IP
 Ou pode criar scripts próprios e inserir o comando abaixo:
 
 - Remover
+
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 
 - Atualizar
+
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 Você irá precisar instalar no linux o SSHPASS
@@ -62,7 +68,9 @@ Você irá precisar instalar no linux o SSHPASS
 Se você ocasionalmente tiver poucos equipamentos afetados e queira executar um a um, execute  o comandos abaixo diretamente no terminal do rádio infectado:
 
 - Remover
+
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
 
 - Atualizar
+
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
