@@ -1,5 +1,10 @@
 #!/bin/bash
 # use clearmf.sh PASS USER NETWORK INITIAL_IP
+# use ./clearmf.sh fucker mother 10.0.0 1
+# Use clearmf_net.sh 
+#/opt/remove_ubnt_mf/clearmf.sh fucker mother 10.0.0 1
+
+
 
 pass=$1
 user=$2
@@ -7,14 +12,16 @@ network=$3
 ip=$4
 
 if [ -z $1]; then
-        pass=YOURPASS
+        #YOURPASS / Vírus PASS default
+        pass=fucker
 fi
 if [ -z $2]; then
-        user=YOURUSER
+        #YOURUSER / Vírus USER default
+        user=mother
 fi
 if [ -z $3]; then
         #Network
-        network="10.0.0."
+        network="10.0.0"
 fi
 if [ -z $4]; then
         #Initial IP
@@ -23,6 +30,6 @@ fi
 
 while [ $ip -lt 255 ]; do
   #SSH connection and execution of desinfect.sh in GIT
-        sshpass -p $pass ssh -o StrictHostKeyChecking=no $user@$network$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+        sshpass -p $pass ssh -o StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
         ip=`expr $ip + 1`
 done
