@@ -12,7 +12,9 @@ if [ -e "$FILE" ] ; then
     rm mf.tar
     rm -Rf .mf
     rm -Rf mcuser
-    rm rc.poststart
+    #rm rc.poststart
+    # Preserve ISP custom scripts Colaboration PVi1 (Git user)
+    sed -i '/mf\/mother/d' /etc/persistent/rc.poststart
     rm rc.prestart
     #Remove mcuser in passwd - by Alexandre
     sed -ir '/mcad/ c ' /etc/inittab
