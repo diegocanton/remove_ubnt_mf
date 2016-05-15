@@ -1,5 +1,7 @@
 This script is used to remove the virus to ubiquiti radios discovered on 05/13/2016 more information at: http://community.ubnt.com/t5/airMAX-General-Discussion/Virus-attack-URGENT-UBNT/td-p/1562940 
 
+UBIQUITI OFFICIAL TOOL >>> http://community.ubnt.com/t5/airMAX-General-Discussion/Malware-Removal-Tool-05-15-2016/m-p/1564953#U1564953
+
 This script change default port HTTP for 81
 
 The exploit use USER:mother and PASS:fucker try it before your user and pass, in test it's work. This script remove this user.
