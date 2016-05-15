@@ -4,6 +4,8 @@ This script change default port HTTP for 81
 
 The exploit use USER:mother and PASS:fucker try it before your user and pass, in test it's work. This script remove this user.
 
+These are examples of the firmware WGET ubiquiti does not support HTTPS connections as the RAW link GitHub. You will need to host the file on a disinfection your server.
+
 # Multiple radios via SSHPASS
 ------------------
 You can use a single Linux machine with SSHPASS installed to clear all your network equipment improving the sample script clearmf.sh 
@@ -51,6 +53,8 @@ Estes scripts são usados para remover o vírus para rádios Ubiquiti descoberto
 Cuidado, isto irá alterar a porta HTTP for 81
 
 O exploit usa USUARIO:mother e SENHA:fucker recomendo tentar usar esse usuário e senha antes da sua, em nossos testes ele tem funcionando. O usuário mother é removido durante a desinfecção.
+
+Estes são exemplos, o WGET do firmware da ubiquiti não suporta conexões HTTPs como do link RAW do GITHUB. Você precisará hospedar o arquivo de desinfecção em um servidor seu.
 
 # Multiplos radios via SSHPASS
 ------------------
