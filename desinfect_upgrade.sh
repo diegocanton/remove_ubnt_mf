@@ -48,7 +48,7 @@ if [ -e "$FILE" ] ; then
             wget $URL
             ubntbox fwupdate.real -m /tmp/XW.v5.6.4.28924.160331.1238.bin
     fi
-    reboot
+    #reboot
 else
     echo "Clear :) No actions"
     exit
