@@ -20,6 +20,10 @@ sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.g
 
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
+- Remove and Upgrade
+
+sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
+
 You need install in server SSHPASS
 - Debian: apt-get install sshpass
 - Centos: yum install sshpass
@@ -35,6 +39,10 @@ wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/de
 - Upgrade
 
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
+
+- Remove and Upgrade
+
+wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
 
 ------------------
 ------------------
@@ -60,6 +68,10 @@ sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.g
 
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
+- Atualizar
+
+sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
+
 Você irá precisar instalar no linux o SSHPASS
 - Debian: apt-get install sshpass
 - Centos: yum install sshpass
@@ -75,3 +87,7 @@ wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/de
 - Atualizar
 
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+
+- Remover e Atualizar
+
+wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
