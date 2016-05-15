@@ -68,7 +68,7 @@ sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.g
 
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
-- Atualizar
+- Remover e Atualizar
 
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
 
