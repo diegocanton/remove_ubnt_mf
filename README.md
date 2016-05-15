@@ -12,7 +12,11 @@ Ex: ./clearmf.sh PASS USER NETWORK INITIAL_IP
 
 Or or create a script with the following command
 
+- Remove
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+
+- Upgrade
+sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 You need install in server SSHPASS
 - Debian: apt-get install sshpass
@@ -22,8 +26,11 @@ You need install in server SSHPASS
 ------------------
 You may prefer to run the command only a single radio to this run the following command
 
+- Remove
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
 
+- Upgrade
+wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
 ------------------
 ------------------
 Estes scripts são usados para remover o vírus para rádios Ubiquiti descoberto em 13/05/2016, mais informações em: http://community.ubnt.com/t5/airMAX-General-Discussion/Virus-attack-URGENT-UBNT/td-p/1562940 
@@ -40,7 +47,11 @@ Ex: ./clearmf.sh PASS USER NETWORK INITIAL_IP
 
 Ou pode criar scripts próprios e inserir o comando abaixo:
 
+- Remover
 sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+
+- Atualizar
+sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 Você irá precisar instalar no linux o SSHPASS
 - Debian: apt-get install sshpass
@@ -50,4 +61,8 @@ Você irá precisar instalar no linux o SSHPASS
 ------------------
 Se você ocasionalmente tiver poucos equipamentos afetados e queira executar um a um, execute  o comandos abaixo diretamente no terminal do rádio infectado:
 
+- Remover
+wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+
+- Atualizar
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
