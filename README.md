@@ -23,3 +23,30 @@ You need install in server SSHPASS
 You may prefer to run the command only a single radio to this run the following command
 
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+
+------------------------------------------------
+Estes scripts são usados para remover o vírus para rádios Ubiquiti descoberto em 13/05/2016, mais informações em: http://community.ubnt.com/t5/airMAX-General-Discussion/Virus-attack-URGENT-UBNT/td-p/1562940 
+
+Cuidado, isto irá alterar a porta HTTP for 81
+
+O exploit usa USUARIO:mother e SENHA:fucker recomendo tentar usar esse usuário e senha antes da sua, em nossos testes ele tem funcionando.
+
+# Multiplos radios via SSHPASS
+------------------
+Você pode usar uma simples maquina com SSHPASS instalado para limpar toda sua rede adaptando os scripts clearmf de exemplo.
+
+Ex: ./clearmf.sh PASS USER NETWORK INITIAL_IP
+
+Ou pode criar scripts próprios e inserir o comando abaixo:
+
+sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+
+Você irá precisar instalar no linux o SSHPASS
+- Debian: apt-get install sshpass
+- Centos: yum install sshpass
+
+# Diretamente no Radio
+------------------
+Se você ocasionalmente tiver poucos equipamentos afetados e queira executar um a um, execute  o comandos abaixo diretamente no terminal do rádio infectado:
+
+wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
