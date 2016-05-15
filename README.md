@@ -35,6 +35,7 @@ wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/de
 - Upgrade
 
 wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
+
 ------------------
 ------------------
 Estes scripts são usados para remover o vírus para rádios Ubiquiti descoberto em 13/05/2016, mais informações em: http://community.ubnt.com/t5/airMAX-General-Discussion/Virus-attack-URGENT-UBNT/td-p/1562940 
