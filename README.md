@@ -21,15 +21,15 @@ Or or create a script with the following command
 
 - Remove
 
-sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+sshpass -p PASS ssh  -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 
 - Upgrade
 
-sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
+sshpass -p PASS ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 - Remove and Upgrade
 
-sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
+sshpass -p PASS ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
 
 You need install in server SSHPASS
 - Debian: apt-get install sshpass
@@ -71,15 +71,15 @@ Ou pode criar scripts próprios e inserir o comando abaixo:
 
 - Remover
 
-sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+sshpass -p PASS ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 
 - Atualizar
 
-sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
+sshpass -p PASS ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 - Remover e Atualizar
 
-sshpass -p PASS ssh -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
+sshpass -p PASS ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
 
 Você irá precisar instalar no linux o SSHPASS
 - Debian: apt-get install sshpass
