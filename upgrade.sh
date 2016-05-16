@@ -1,5 +1,5 @@
 #!/bin/bash
-# use clearmf.sh USER PASS NETWORK INITIAL_IP LAST_IP
+# use upgrade.sh USER PASS NETWORK INITIAL_IP LAST_IP
 
 user=$1
 pass=$2
@@ -36,9 +36,9 @@ mkdir $log_dir
 lastip=`expr $lastip + 1`
 
 while [ $ip -lt $lastip ]; do
-  # SSH connection and execution of disinfect.sh
-  echo "$network.$ip" > $log_dir/clearmf_$network.$ip.log
-  echo "$network.$ip" > $log_dir/clearmf_$network.$ip.err
-  sshpass -p $pass ssh -o StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/zanix/remove_ubnt_mf/master/disinfect.sh | sh" 2>> $log_dir/clearmf_$network.$ip.err >> $log_dir/clearmf_$network.$ip.log &
+  # SSH connection and execution of fwupgrade.sh
+  echo "$network$ip" > $log_dir/upgrade_$network.$ip.log
+  echo "$network$ip" > $log_dir/upgrade_$network.$ip.err
+  sshpass -p $pass ssh -o StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/zanix/remove_ubnt_mf/master/fwupgrade.sh | sh" 2>> $log_dir/upgrade_$network.$ip.err >> $log_dir/upgrade_$network.$ip.log &
   ip=`expr $ip + 1`
 done
