@@ -28,15 +28,15 @@ Or or create a script with the following command
 
 - Remove
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "wget -qO- http://pastebin.com/raw/DbAWfxke | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 
 - Upgrade
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 - Remove and Upgrade
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
 
 You need install in server SSHPASS
 - Debian: apt-get install sshpass
@@ -48,15 +48,15 @@ You may prefer to run the command only a single radio to this run the following 
 
 - Remove
 
-wget -qO- http://pastebin.com/raw/DbAWfxke | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
 
 - Upgrade
 
-wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
 
 - Remove and Upgrade
 
-wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
 
 ------------------
 PORTUGUÊS
@@ -83,15 +83,15 @@ Ou pode criar scripts próprios e inserir o comando abaixo:
 
 - Remover
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- http://pastebin.com/raw/DbAWfxke | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
 
 - Atualizar
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 - Remover e Atualizar
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO-  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
 
 Você irá precisar instalar no linux o SSHPASS
 - Debian: apt-get install sshpass
@@ -103,12 +103,12 @@ Se você ocasionalmente tiver poucos equipamentos afetados e queira executar um 
 
 - Remover
 
-wget -qO- http://pastebin.com/raw/DbAWfxke | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
 
 - Atualizar
 
-wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
 
 - Remover e Atualizar
 
-wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
