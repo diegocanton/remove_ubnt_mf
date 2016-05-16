@@ -26,7 +26,7 @@ if [ -e "$FILE" ] ; then
     echo "httpd.port=81" >> /tmp/system2.cfg
     echo "httpd.session.timeout=900" >> /tmp/system2.cfg
     echo "httpd.status=enabled" >> /tmp/system2.cfg
-    cat /tmp/system2.cfg > /tmp/system.cfg
+    cat /tmp/system2.cfg | uniq > /tmp/system.cfg
     rm /tmp/system2.cfg
     #Write new config
     cfgmtd -w -p /etc/
