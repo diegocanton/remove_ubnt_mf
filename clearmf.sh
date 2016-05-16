@@ -31,12 +31,12 @@ fi
 while [ $ip -lt 255 ]; do
   #SSH connection and execution of desinfect.sh in GIT
         #Only remove
-        #sshpass -p $pass ssh -o -o ConnectTimeout=10 StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh" &
+        #sshpass -p $pass ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh" &
         
         #Only upgrade
-        #sshpass -p $pass ssh -o -o ConnectTimeout=10 StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" &
+        #sshpass -p $pass ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" &
         
         # Remove and upgrade - Default Option
-        sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh" &
+        sshpass -p $pass ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh" &
         ip=`expr $ip + 1`
 done
