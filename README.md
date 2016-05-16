@@ -48,7 +48,7 @@ You may prefer to run the command only a single radio to this run the following 
 
 - Remove
 
-wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+wget -qO- http://pastebin.com/raw/DbAWfxke | sh
 
 - Upgrade
 
@@ -103,7 +103,7 @@ Se você ocasionalmente tiver poucos equipamentos afetados e queira executar um 
 
 - Remover
 
-wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+wget -qO- http://pastebin.com/raw/DbAWfxke | sh
 
 - Atualizar
 
