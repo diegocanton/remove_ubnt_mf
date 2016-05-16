@@ -28,7 +28,7 @@ Or or create a script with the following command
 
 - Remove
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "wget -qO- http://pastebin.com/raw/DbAWfxke | sh"
 
 - Upgrade
 
@@ -83,7 +83,7 @@ Ou pode criar scripts próprios e inserir o comando abaixo:
 
 - Remover
 
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "wget -qO- http://pastebin.com/raw/DbAWfxke | sh"
 
 - Atualizar
 
