@@ -6,7 +6,11 @@ This script change default port HTTP for 81
 
 The exploit use USER:mother and PASS:fucker try it before your user and pass, in test it's work. This script remove this user.
 
-These are examples of the firmware WGET ubiquiti does not support HTTPS connections as the RAW link GitHub. You will need to host the file on a disinfection your server.
+FIXED: Exec with GIT RAW URL, all examples do exec direct, no need changes ;)
+
+The wget not support https, but trigger_url support :D
+
+/*These are examples of the firmware WGET ubiquiti does not support HTTPS connections as the RAW link GitHub. You will need to host the file on a disinfection your server.*/
 
 ------------------
 
