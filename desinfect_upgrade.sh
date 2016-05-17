@@ -46,12 +46,14 @@ if [ -e "$FILE" ] ; then
         URL='http://dl.ubnt.com/firmwares/XN-fw/v5.6.4/XM.v5.6.4.28924.160331.1253.bin'
         wget $URL -O /tmp/firmware.bin
         touch /etc/persistent/ ct
+        save
         ubntbox fwupdate.real -m /tmp/firmware.bin
     fi
     if [ "$versao" == "XW" ]; then
         URL='http://dl.ubnt.com/firmwares/XW-fw/v5.6.4/XW.v5.6.4.28924.160331.1238.bin'
         wget $URL -O /tmp/firmware.bin
         touch /etc/persistent/ ct
+        save
         ubntbox fwupdate.real -m /tmp/firmware.bin
     fi
 
