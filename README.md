@@ -2,6 +2,8 @@ This script is used to remove the virus to ubiquiti radios discovered on 05/13/2
 
 UBIQUITI OFFICIAL TOOL >>> http://community.ubnt.com/t5/airMAX-General-Discussion/Malware-Removal-Tool-05-15-2016/m-p/1564953#U1564953
 
+I want to make my special thanks to Alexandre Jeronimo Correa - Onda Internet and PVi1 (Git user) by collaboration with improvements in code and some users who alerted me little mistakes.
+
 Beware, this will change the HTTP port is 81
 
 The exploit uses USER: mother and PASSWORD: fucker recommend trying to use this username and password before your own password, in our tests it is working. The mother user is removed during disinfection.
@@ -63,6 +65,8 @@ Para executar em paralelo, coloque um o "&" do final das linhas de comando de ac
 
 ------------------
 Estes scripts são usados para remover o vírus para rádios Ubiquiti descoberto em 13/05/2016, mais informações em: http://community.ubnt.com/t5/airMAX-General-Discussion/Virus-attack-URGENT-UBNT/td-p/1562940 
+
+Quero deixar meus agradecimentos especiais para Alexandre Jeronimo Correa - Onda Internet e PVi1 (Git user) pela colaboração com melhorias no código e alguns usuários que me alertaram em pequenos erros.
 
 Cuidado, isto irá alterar a porta HTTP for 81
 
