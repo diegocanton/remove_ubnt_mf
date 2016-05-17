@@ -2,6 +2,10 @@
 # This script upgrade firmware
 # Colaboration: Alexandre Jeronimo Correa - Onda Internet
 
+FILE=/bin/ubntbox
+
+# Check if device is Ubiquiti Radio
+if [ -e "$FILE" ] ; then
     # Ativa Compilance Test
     touch /etc/persistent/ ct
     /bin/cfgmtd -w -p /etc/
@@ -20,3 +24,4 @@
         wget $URL -O /tmp/firmware.bin
         ubntbox fwupdate.real -m /tmp/firmware.bin
     fi
+fi
