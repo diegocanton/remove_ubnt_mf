@@ -38,9 +38,6 @@ sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeo
 
 sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
-- Remove and Upgrade
-
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
 
 You need install in server SSHPASS
 - Debian: apt-get install sshpass
@@ -58,9 +55,6 @@ trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/
 
 trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
 
-- Remove and Upgrade
-
-trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
 
 ------------------
 PORTUGUÊS
@@ -93,9 +87,6 @@ sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeo
 
 sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
-- Remover e Atualizar
-
-sshpass -p PASS ssh -o KexAlgorithms=+diffie-hellman-group1-sha1 -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh"
 
 Você irá precisar instalar no linux o SSHPASS
 - Debian: apt-get install sshpass
@@ -113,6 +104,3 @@ trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/
 
 trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
 
-- Remover e Atualizar
-
-trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect_upgrade.sh | sh
