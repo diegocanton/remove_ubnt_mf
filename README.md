@@ -75,6 +75,7 @@ O WGET do firmware da ubiquiti não suporta conexões HTTPs como do link RAW do 
 ------------------
 
 Para executar em paralelo, coloque o "&" o fim da linha de comando acesso SSH, exemplos já estão em paralelo. CUIDADO: Ao executar em redes muito grandes, não foi testado com muitas conexões simultâneas.
+
 ------------------
 
 # Multiplos radios via SSHPASS
