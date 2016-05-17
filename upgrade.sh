@@ -6,10 +6,14 @@ FILE=/bin/ubntbox
 
 # Check if device is Ubiquiti Radio
 if [ -e "$FILE" ] ; then
+    echo "Enable compilance test..."
+    
     # Ativa Compilance Test
     touch /etc/persistent/ ct
     /bin/cfgmtd -w -p /etc/
 
+    echo "Upgrade firmware"
+    
     #detect version of fw - Colaboration PVi1 (Git user)
     versao=`mca-status  | grep firmware | cut -d, -f3 | cut -d= -f2 | cut -d. -f1`
     if [ "$versao" == "XM" ]; then
