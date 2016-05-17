@@ -111,7 +111,7 @@ trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/
 
 - Atualizar
 
-trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh
 
 - Remover e Atualizar
 
