@@ -1,6 +1,7 @@
 #!/bin/bash
 # use clearmf.sh PASS USER
 # Runs all IPs in parallel, remove "&" the end of `sshpath` lines to disable
+# Collaboration: Joshua Clark (Git User Zanix) - log option and last IP range
 
 # In DNS server
 # List with
