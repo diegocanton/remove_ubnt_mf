@@ -12,6 +12,9 @@ These are examples, you need to download them (examples clearmf.sh) on a Linux f
 
 The ubiquiti firmware WGET does not support HTTPS connections as RAW GitHub link, so we use a function of UBNT, tirgger_url.
 
+- Log generation added by Joshua Clark (Git user Zabbix). Thanks man.
+- Upgrade firmware added by Alexandre Jeronimo Correa. Thanks man,
+
 ------------------
 
 Check in your DNS IPs infected via TCPDUMP, DNS querys, print IP query xxx.xxx.xxx.xxx. (query by mf infection)
