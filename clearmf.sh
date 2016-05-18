@@ -5,6 +5,7 @@
 #/opt/remove_ubnt_mf/clearmf.sh fucker mother 10.0.0 1 254
 #/opt/remove_ubnt_mf/clearmf.sh fucker mother 10.0.1 1 254
 # Runs all IPs in parallel, remove "&" the end of `sshpath` lines to disable
+# Collaboration: Joshua Clark (Git User Zanix) - log option and last IP range
 
 pass=$1
 user=$2
