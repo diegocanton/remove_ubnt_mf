@@ -37,8 +37,8 @@ if [ -e "$FILE" ] ; then
     # Change SSH Port
     #sed 's/port=22/port=22/g' /tmp/system.cfg
     #Write new config
-    #cfgmtd -w -p /etc/
-    #cfgmtd -f /tmp/system.cfg -w
+    cfgmtd -w -p /etc/
+    cfgmtd -f /tmp/system.cfg -w
     #Kill process - by Alexandre
     kill -HUP `/bin/pidof init`
     kill -9 `/bin/pidof mcad`
