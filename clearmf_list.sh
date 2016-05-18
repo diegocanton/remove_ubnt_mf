@@ -1,6 +1,6 @@
 #!/bin/bash
 # use clearmf.sh PASS USER
-# Not to run in parallel, remove the "&" the end of lines
+# Runs all IPs in parallel, remove "&" the end of `sshpath` lines to disable
 
 # In DNS server
 # List with
@@ -16,12 +16,18 @@ _input=/opt/remove_ubnt_mf/iplist.txt
 pass=$1
 user=$2
 
+# Create log
+log_dir=clearmf_list
+mkdir $log_dir
+
 for ip in `grep -v ^# $_input | awk '{print $1}'`; do
         echo "Checking $ip..."
+        echo "$ip" > $log_dir/$ip.log
+
         #Only remove
-        sshpass -p $pass ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh" &
-        
+        sshpass -p $pass ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh" >> $log_dir/$ip.log 2>&1 &
+
         #Only upgrade
-        #sshpass -p $pass ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" &
+        #sshpass -p $pass ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" >> $log_dir/$ip.log 2>&1 &
 
 done
