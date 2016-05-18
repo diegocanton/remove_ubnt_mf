@@ -11,6 +11,7 @@ if [ -e "$FILE" ] ; then
 
     # Ativa Compilance Test
     touch /etc/persistent/ct
+    
     /bin/cfgmtd -w -p /etc/
 
     echo "Upgrade firmware"
