@@ -8,7 +8,7 @@ Beware, this will change the HTTP port is 81
 
 The exploit uses USER: mother and PASSWORD: fucker recommend trying to use this username and password before your own password, in our tests it is working. The mother user is removed during disinfection.
 
-These are examples, you need to download them (examples clearmf.sh) on a Linux for execution, are two separate scripts, one clean and the other updates activating Compilance Test. We have not succeeded in implementing the three tasks simultaneously. So I suggest that first option to upgrade the entire network running the script with the online upgrade without comment and line desinfect commented in second run make clean, so you can enjoy the mother user the virus.
+These are examples, you need to download them (examples clearmf.sh) on a Linux for execution, are two separate scripts, one clean and the other updates activating Compilance Test. We have not succeeded in implementing the three tasks simultaneously. So I suggest that first option to upgrade the entire network running the script with the online upgrade without comment and line disinfect commented in second run make clean, so you can enjoy the mother user the virus.
 
 The ubiquiti firmware WGET does not support HTTPS connections as RAW GitHub link, so we use a function of UBNT, tirgger_url.
 
@@ -35,7 +35,7 @@ Or or create a script with the following command
 
 - Remove
 
-sshpass -p PASS ssh  -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+sshpass -p PASS ssh  -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh"
 
 - Upgrade
 
@@ -52,7 +52,7 @@ You may prefer to run the command only a single radio to this run the following 
 
 - Remove
 
-trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh
 
 - Upgrade
 
@@ -75,7 +75,7 @@ Cuidado, isto irá alterar a porta HTTP for 81
 
 O exploit usa USUARIO:mother e SENHA:fucker recomendo tentar usar esse usuário e senha antes da sua própria senha, em nossos testes ele tem funcionando. O usuário mother é removido durante a desinfecção.
 
-Estes são exemplos, você precisará baixa-los (exemplos clearmf.sh) em um Linux para execução, são dois scripts independentes, um limpa e o outro atualiza ativando Compilance Test. Não tivemos sucesso na execução das 3 tarefas em simultaneo. Então sugiro que em primeira opção atualize toda a rede executando o script com a linha do upgrade sem comentário e linha desinfect comentada, em segunda execução faça a limpeza, assim você poderá aproveitar o usuário mother do vírus.
+Estes são exemplos, você precisará baixa-los (exemplos clearmf.sh) em um Linux para execução, são dois scripts independentes, um limpa e o outro atualiza ativando Compilance Test. Não tivemos sucesso na execução das 3 tarefas em simultaneo. Então sugiro que em primeira opção atualize toda a rede executando o script com a linha do upgrade sem comentário e linha disinfect comentada, em segunda execução faça a limpeza, assim você poderá aproveitar o usuário mother do vírus.
 
 O WGET do firmware da ubiquiti não suporta conexões HTTPs como do link RAW do GITHUB, por isso usamos uma função da UBNT, tirgger_url.
 
@@ -95,7 +95,7 @@ Ou pode criar scripts próprios e inserir o comando abaixo:
 
 - Remover
 
-sshpass -p PASS ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh"
+sshpass -p PASS ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh"
 
 - Atualizar
 
@@ -112,7 +112,7 @@ Se você ocasionalmente tiver poucos equipamentos afetados e queira executar um 
 
 - Remover
 
-trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh
+trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh
 
 - Atualizar
 
