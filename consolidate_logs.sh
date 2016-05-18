@@ -4,6 +4,7 @@
 # When cleanmf.sh is ran, a log directory is created
 # with a log files for every IP address.
 # This script consolidates each IP log into 1 file.
+# Joshua Clark (Git User Zanix) - log option and last IP range - Consolidate_logs.sh by Joshua
 
 for d in */ ; do
   d2=${d::-1}
