@@ -1,6 +1,7 @@
 #!/bin/bash
 # This script upgrade firmware
-# Colaboration: Alexandre Jeronimo Correa - Onda Internet
+# Author: Alexandre Jeronimo Correa - Onda Internet
+# Collaboration: Diego Canton, PVi1 (Git user) and Joshua Clark (Git User Zanix) - Improvements
 
 FILE=/bin/ubntbox
 
