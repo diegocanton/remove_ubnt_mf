@@ -21,13 +21,17 @@ if [ -e "$FILE" ] ; then
     if [ "$versao" == "XM" ]; then
         echo "Device XM"
         #URL='http://dl.ubnt.com/firmwares/XN-fw/v5.6.4/XM.v5.6.4.28924.160331.1253.bin'
-        URL='http://dl.ubnt.com/firmwares/XN-fw/v5.6.5/XM.v5.6.5.29033.160515.2119.bin'
+        # 5.6.4 licensed
+        URL='http://dl.ubnt.com/XN-fw-internal/v5.6.4/XM.v5.6.4-licensed.28998.160428.1051.bin'
+        #URL='http://dl.ubnt.com/firmwares/XN-fw/v5.6.5/XM.v5.6.5.29033.160515.2119.bin'
         wget $URL -O /tmp/firmware.bin
         ubntbox fwupdate.real -m /tmp/firmware.bin
     elif [ "$versao" == "XW" ]; then
         echo "Device XW"
         #URL='http://dl.ubnt.com/firmwares/XW-fw/v5.6.4/XW.v5.6.4.28924.160331.1238.bin'
-        URL='http://dl.ubnt.com/firmwares/XW-fw/v5.6.5/XW.v5.6.5.29033.160515.2108.bin'
+        # 5.6.4 licensed
+        URL='http://dl.ubnt.com/XN-fw-internal/v5.6.4/XW.v5.6.4-licensed.28998.160428.1038.bin'
+        #URL='http://dl.ubnt.com/firmwares/XW-fw/v5.6.5/XW.v5.6.5.29033.160515.2108.bin'
         wget $URL -O /tmp/firmware.bin
         ubntbox fwupdate.real -m /tmp/firmware.bin
     else
