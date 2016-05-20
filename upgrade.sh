@@ -10,9 +10,9 @@ if [ -e "$FILE" ] ; then
     echo "Enable compilance test..."
 
     # Ativa Compilance Test
-    touch /etc/persistent/ct
+    #touch /etc/persistent/ct
     
-    /bin/cfgmtd -w -p /etc/
+    #/bin/cfgmtd -w -p /etc/
 
     echo "Upgrade firmware"
 
