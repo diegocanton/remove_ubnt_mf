@@ -46,10 +46,10 @@ while [ $ip -lt $lastip ]; do
         echo "$network.$ip" > $log_dir/$network.$ip.log
 
         #Only remove
-        sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh" >> $log_dir/$network.$ip.log 2>&1 &
+        sshpass -p $pass ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh" >> $log_dir/$network.$ip.log 2>&1 &
 
         #Only upgrade
-        #sshpass -p $pass ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" >> $log_dir/$network.$ip.log 2>&1 &
+        #sshpass -p $pass ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$network.$ip "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" >> $log_dir/$network.$ip.log 2>&1 &
 
         ip=$((ip+1))
 done
