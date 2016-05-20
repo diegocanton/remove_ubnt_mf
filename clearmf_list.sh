@@ -26,9 +26,9 @@ for ip in `grep -v ^# $_input | awk '{print $1}'`; do
         echo "$ip" > $log_dir/$ip.log
 
         #Only remove
-        sshpass -p $pass ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh" >> $log_dir/$ip.log 2>&1 &
+        sshpass -p $pass ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/desinfect.sh | sh" >> $log_dir/$ip.log 2>&1 &
 
         #Only upgrade
-        #sshpass -p $pass ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" >> $log_dir/$ip.log 2>&1 &
+        #sshpass -p $pass ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o StrictHostKeyChecking=no $user@$ip "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh" >> $log_dir/$ip.log 2>&1 &
 
 done
