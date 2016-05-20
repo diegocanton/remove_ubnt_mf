@@ -35,11 +35,11 @@ Or or create a script with the following command
 
 - Remove
 
-sshpass -p PASS ssh  -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh"
+sshpass -p PASS ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10  -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh"
 
 - Upgrade
 
-sshpass -p PASS ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
+sshpass -p PASS ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 
 You need install in server SSHPASS
@@ -95,11 +95,11 @@ Ou pode criar scripts próprios e inserir o comando abaixo:
 
 - Remover
 
-sshpass -p PASS ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh"
+sshpass -p PASS ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/disinfect.sh | sh"
 
 - Atualizar
 
-sshpass -p PASS ssh  -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
+sshpass -p PASS ssh -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o StrictHostKeyChecking=no USER@IP "trigger_url  https://raw.githubusercontent.com/diegocanton/remove_ubnt_mf/master/upgrade.sh | sh"
 
 
 Você irá precisar instalar no linux o SSHPASS
